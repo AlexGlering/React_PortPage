@@ -1,29 +1,28 @@
 import React, { useState, UseEffect } from "react";
 import { motion } from "framer-motion";
-import { images } from '../../constants'
+import { images } from "../../constants";
 import "./About.scss";
-
-
 
 const abouts = [
   {
     title: "Web Development",
     description: "I'm a decent web developer.",
-    imgUrl: images.about01
+    imgUrl: images.about01,
   },
   {
     title: "Web Design",
     description: "I'm a decent web developer.",
-    imgUrl: images.about02
+    imgUrl: images.about02,
   },
-  { title: "UI/UX", 
-    description: "I'm a decent web developer.", 
-    imgUrl: images.about03 
+  {
+    title: "UI/UX",
+    description: "I'm a decent web developer.",
+    imgUrl: images.about03,
   },
   {
     title: "Web Animation",
     description: "I'm a decent web developer.",
-    imgUrl: images.about04
+    imgUrl: images.about04,
   },
 ];
 

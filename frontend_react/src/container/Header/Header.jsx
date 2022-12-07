@@ -9,10 +9,10 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOut'
-    }
-  }
-}
+      ease: "easeInOut",
+    },
+  },
+};
 
 const Header = () => {
   return (
@@ -65,7 +65,7 @@ const Header = () => {
         ))}
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
