@@ -32,9 +32,9 @@ const About = () => {
     <>
       <h2 className="head-text">
         I know that
-        <span>Good design</span> <br />
+        <span> Good design </span> <br />
         means
-        <span>Good business</span>
+        <span> Good business</span>
       </h2>
 
       <div className="app__profiles">
