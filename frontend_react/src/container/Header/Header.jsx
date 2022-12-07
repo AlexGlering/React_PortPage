@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 
 const scaleVariants = {
-  whileInView: {
+  whileinview: {
     scale: [0, 1],
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: "easeInOut",
-    },
-  },
-};
+      ease: 'easeInOut'
+    }
+  }
+}
 
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div id="home" className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -49,12 +49,12 @@ const Header = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
           src={images.circle}
           alt="profile_circle"
-          className="overlay circle"
+          className="overlay_circle"
         />
       </motion.div>
 
       <motion.div
-        variant={scaleVariants}
+        variants={scaleVariants}
         whileinView={scaleVariants.whileInView}
         className="app__header-circles"
       >
@@ -65,7 +65,7 @@ const Header = () => {
         ))}
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
 export default Header;
