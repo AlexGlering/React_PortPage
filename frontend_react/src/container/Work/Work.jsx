@@ -12,7 +12,21 @@ const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
 
-  const handleWorkFilter = (item) => {};
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard({ y: 100, opacity: 0 });
+
+    setTimeout(() => {
+      setAnimateCard({ y: 0, opacity: 1 });
+
+      if (item === "All") {
+        setFilterWork(works);
+      } else {
+        const filter = works.filter((work) => work.tags.includes(item));
+        setFilterWork(filter);
+      }
+    }, 500);
+  };
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -26,7 +40,6 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">
-        {" "}
         My <span>Work</span>
       </h2>
 
@@ -105,4 +118,4 @@ const Work = () => {
   );
 };
 
-export default AppWrap(Work, 'work');
+export default AppWrap(Work, "work");
