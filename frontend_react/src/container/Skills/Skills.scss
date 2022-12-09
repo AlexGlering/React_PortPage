@@ -35,7 +35,7 @@
 .app__skills-item {
   flex-direction: column;
   text-align: center;
-  margin: 3rem;
+  margin: 2rem;
   transition: all 0.3s ease-in-out;
 
   div {
@@ -45,8 +45,8 @@
     background-color: #fff;
 
     img {
-      width: 50%;
-      height: 50%;
+      width: 60%;
+      height: 60%;
     }
 
     &:hover {
