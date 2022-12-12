@@ -6,10 +6,10 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(58, 59, 60, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   position: fixed;
   z-index: 2;
 }
@@ -20,8 +20,8 @@
   align-items: center;
 
   img {
-    width: 90px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -45,7 +45,7 @@
       margin-bottom: 5px;
     }
     a {
-      color: var(--gray-color);
+      color: var(--primary-text-color);
       text-decoration: none;
       flex-direction: column;
       text-transform: uppercase;

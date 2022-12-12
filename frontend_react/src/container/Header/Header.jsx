@@ -4,37 +4,25 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { AppWrap } from "../../wrapper";
 
-const scaleVariants = {
-  whileinview: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: "easeInOut",
-    },
-  },
-};
-
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div className="app__header app__flex hexagon">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="app__header-info"
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hi, I'm</p>
-              <h1 className="head-text">Your dad</h1>
+              <h1 className="head-text"><span>Alex </span>Glering</h1>
             </div>
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">Big Cheese</p>
-            <p className="p-text">Don Of The Underworld</p>
+            <p className="p-text">Software Engineering Student</p>
+            <p className="p-text">Licensed educator/teacher</p>
           </div>
         </div>
       </motion.div>
@@ -44,22 +32,22 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        {/*<img src={images.monke1} alt="profile_bg" className="monke"/>*/}
         <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          src={images.circle}
+          whileInView={{ scale: [0, 1.3], opacity: 0.5, rotate: 360 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          src={images.cyberframe}
           alt="profile_circle"
           className="overlay_circle"
         />
       </motion.div>
 
       <motion.div
-        variants={scaleVariants}
-        whileinView={scaleVariants.whileInView}
+        whileInView={{ scale: [0, 1], opacity: [0, 1] }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {[images.mysql, images.java, images.react].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>

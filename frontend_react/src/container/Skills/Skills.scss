@@ -42,7 +42,7 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--hover-color) !important;
 
     img {
       width: 60%;
@@ -50,7 +50,8 @@
     }
 
     &:hover {
-      box-shadow: 0 0 25px #fef4f5;
+      box-shadow: 0 3px 8px 0 var(--secondary-color);
+      scale: 1.05;
     }
 
     @media (min-width: 2000px) {
@@ -126,7 +127,7 @@
 
     p{
         font-weight: 800;
-        color: var(--gray-color);
+        color: var(--primary-text-color);
     }
 
     @media (max-width: 450px) {

@@ -34,8 +34,18 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import grilla1 from '../assets/grilla1.png'
+import cyberframe from '../assets/cyberframe.png'
+import mysql from '../assets/mysql.png'
+import java from '../assets/java.png'
+import monke1 from '../assets/monke1.png'
 
 export default {
+  monke1,
+  java,
+  mysql,
+  cyberframe,
+  grilla1,
   email,
   mobile,
   api,
