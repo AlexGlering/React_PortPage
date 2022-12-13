@@ -16,7 +16,9 @@ const Header = () => {
           <div className="badge-cmp app__flex">
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hi, I'm</p>
-              <h1 className="head-text"><span>Alex </span>Glering</h1>
+              <h1 className="head-text">
+                <span>Alex </span>Glering
+              </h1>
             </div>
           </div>
 
@@ -43,14 +45,19 @@ const Header = () => {
       </motion.div>
 
       <motion.div
-        whileInView={{ scale: [0, 1], opacity: [0, 1] }}
-        transition={{ duration: 1, ease: "easeInOut" }}
         className="app__header-circles"
+        whileInView={{ opacity: [0, 1] }}
       >
         {[images.mysql, images.java, images.react].map((circle, index) => (
-          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+          <motion.div
+            className="circle-cmp app__flex"
+            key={`circle-${index}`}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: index * 0.5 }}
+          >
             <img src={circle} alt="circle" />
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>
