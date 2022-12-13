@@ -48,7 +48,7 @@ const Header = () => {
         className="app__header-circles"
         whileInView={{ opacity: [0, 1] }}
       >
-        {[images.mysql, images.java, images.react].map((circle, index) => (
+        {[images.postgres, images.java, images.react].map((circle, index) => (
           <motion.div
             className="circle-cmp app__flex"
             key={`circle-${index}`}

@@ -57,13 +57,14 @@
 
   .badge-cmp,
   .tag-cmp {
-    background-color: var(--hover-color);
+    background-color: var(--card-color);
     margin-top: 2rem;
     padding: 1rem 2rem;
     border-radius: 15px;
     flex-direction: row;
     width: auto;
-    box-shadow: 0 3px 8px 4px var(--secondary-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    
   }
 
   .tag-cmp {
@@ -105,8 +106,8 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: var(--hover-color);
-    box-shadow: 0 4px 8px 3px var(--secondary-color);
+    background: var(--card-color);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
     img {
       width: 60%;
       height: 60%;

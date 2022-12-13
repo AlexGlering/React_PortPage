@@ -52,6 +52,9 @@
 
   &:hover {
     background-color: var(--secondary-color);
+    img{
+        filter: brightness(10000%)
+    }
   }
 
   @media screen and (max-width: 450px) {
