@@ -1,3 +1,10 @@
+#about{
+  position: relative;
+  background-image: url("../../assets/pointy1.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .app__about {
   flex: 1;
   width: 100%;
@@ -16,7 +23,7 @@
   background-color: var(--primary-color);
   border-style: solid;
   border-color: var(--secondary-color);
-  border-width: 1px;
+  border-width: 2px;
   width: 190px;
   margin: 2rem;
   border-radius: 15px;

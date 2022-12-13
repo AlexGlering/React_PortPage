@@ -58,10 +58,12 @@
   .badge-cmp,
   .tag-cmp {
     background-color: var(--hover-color);
+    margin-top: 2rem;
     padding: 1rem 2rem;
     border-radius: 15px;
     flex-direction: row;
     width: auto;
+    box-shadow: 0 3px 8px 0 var(--secondary-color);
   }
 
   .tag-cmp {
@@ -115,13 +117,13 @@
   }
 
   div:nth-child(1) {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   div:nth-child(2) {
-    margin: 1.75rem;
-    width: 150px;
-    height: 150px;
+    margin: 4rem;
+    width: 120px;
+    height: 120px;
   }
   div:nth-child(3) {
     width: 70px;
