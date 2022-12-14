@@ -64,7 +64,6 @@
     flex-direction: row;
     width: auto;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    
   }
 
   .tag-cmp {
@@ -100,7 +99,6 @@
   align-items: flex-start;
   height: 100%;
   margin-left: 1rem;
-  
 
   div {
     width: 100px;
@@ -167,6 +165,8 @@
     width: 100%;
     object-fit: contain;
     z-index: 1;
+    margin: auto;
+    height: 40%;
   }
 
   .overlay_circle {
@@ -177,15 +177,10 @@
     z-index: 0;
     width: 100%;
     height: 90%;
-    margin-bottom: 4rem;
+    margin-bottom: 1.7rem;
   }
 
   @media screen and (max-width: 1200px) {
     margin: 2rem 0;
   }
-}
-
-.monke{
-  margin-bottom: 5rem;
-  
 }

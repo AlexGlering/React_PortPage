@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { AppWrap } from "../../wrapper";
 
 const Header = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <div className="app__header app__flex hexagon">
       <motion.div
@@ -29,20 +31,24 @@ const Header = () => {
         </div>
       </motion.div>
 
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
-      >
-        {/*<img src={images.monke1} alt="profile_bg" className="monke"/>*/}
+      <div className="app__header-img">
         <motion.img
-          whileInView={{ scale: [0, 1.3], opacity: 0.5, rotate: 360 }}
+          src={images.face2}
+          alt="profile_bg"
+          className="profile"
+          onLoad={() => setIsLoaded(true)}
+          initial={{ opacity: 0 }}
+          animate={isLoaded ? { opacity: 1, scale: [0, 1] } : {}}
           transition={{ duration: 1.5, ease: "easeInOut" }}
+        />
+        <motion.img
+          whileInView={{ scale: [0, 1.1], opacity: 0.5, rotate: 360 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           src={images.cyberframe}
           alt="profile_circle"
           className="overlay_circle"
         />
-      </motion.div>
+      </div>
 
       <motion.div
         className="app__header-circles"

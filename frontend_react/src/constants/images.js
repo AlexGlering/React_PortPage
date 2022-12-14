@@ -42,8 +42,10 @@ import monke1 from "../assets/monke1.png";
 import phone from "../assets/phone.png";
 import mail from "../assets/mail.png";
 import postgres from "../assets/postgres.png";
+import face2 from '../assets/face2.png';
 
 export default {
+  face2,
   updatess,
   postgres,
   mail,
