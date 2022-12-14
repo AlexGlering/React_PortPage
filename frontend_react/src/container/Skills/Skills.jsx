@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import Tippy from '@tippyjs/react'
-import 'tippy.js/dist/tippy.css'
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 import { urlFor, client } from "../../client";
 import "./Skills.scss";
 
@@ -23,9 +23,24 @@ const Skills = () => {
     });
   }, []);
 
+  function handleClick() {
+    const a = document.createElement("a");
+    a.style.display = "none";
+    document.body.appendChild(a);
+
+    a.href = '../../assets/Documents/cv.pdf'
+    a.download = "cv.pdf";
+
+    a.click();
+
+    document.body.removeChild(a);
+  }
+
   return (
     <>
-      <h2 className="head-text">Skills & <span>Experiences</span></h2>
+      <h2 className="head-text">
+        Skills & <span>Experiences</span>
+      </h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -55,7 +70,6 @@ const Skills = () => {
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
-                    <Tippy content={work.desc}>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
@@ -65,12 +79,14 @@ const Skills = () => {
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
-                    </Tippy>
                   </>
                 ))}
               </motion.div>
             </motion.div>
           ))}
+          <div>
+            <button onClick={handleClick}>Download CV</button>
+          </div>
         </div>
       </div>
     </>
@@ -78,6 +94,7 @@ const Skills = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'), 
-  "skills", 'app__cardbg'
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__cardbg"
 );
