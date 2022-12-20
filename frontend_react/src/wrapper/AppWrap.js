@@ -12,7 +12,7 @@ const AppWrap = (Component, idName, classNames) =>
           <Component />
 
           <div className="copyright">
-            <img src={images.grilla1} alt="logo" />
+            <img src={images.monkaslogo} alt="logo" />
             <p className="p-text">@2022 Alexander Flor Glering</p>
             <p className="p-text">All rights reserved</p>
           </div>
