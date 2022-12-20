@@ -2,7 +2,8 @@ import React from "react";
 import { About, Footer, Header, Skills, Work } from "./container";
 import { Navbar } from "./components/";
 import "./App.scss";
-import KommunicateChat from "./chat";
+//import KommunicateChat from "./chat";
+//<KommunicateChat />
 
 const App = () => {
   return (
@@ -12,8 +13,7 @@ const App = () => {
       <About />
       <Work />
       <Skills />
-      <Footer />
-      <KommunicateChat />  
+      <Footer />  
     </div>
   );
 };

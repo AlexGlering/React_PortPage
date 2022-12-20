@@ -23,18 +23,10 @@ const Skills = () => {
     });
   }, []);
 
-  function handleClick() {
-    const a = document.createElement("a");
-    a.style.display = "none";
-    document.body.appendChild(a);
-
-    a.href = '../../assets/Documents/cv.pdf'
-    a.download = "cv.pdf";
-
-    a.click();
-
-    document.body.removeChild(a);
+  async function handleClick() {
+    window.open("https://drive.google.com/file/d/12Fx8CRTAOvH7_JZZK3dwgH9kDhxElbtK/view?usp=share_link", "_blank");
   }
+  
 
   return (
     <>
